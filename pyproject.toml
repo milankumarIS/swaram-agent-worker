@@ -1,0 +1,13 @@
+[project]
+name = "voice-agent-worker"
+version = "0.1.0"
+description = "Python worker for Voice Agent Platform — LiveKit + Gemini + Sarvam"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "livekit-agents[sarvam,silero,turn-detector]~=1.3",
+    "livekit-plugins-google>=1.4.1",
+    "livekit-plugins-noise-cancellation~=0.2",
+    "python-dotenv>=1.2.1",
+    "httpx>=0.27.0",
+]
