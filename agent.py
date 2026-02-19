@@ -95,7 +95,8 @@ async def voice_agent_session(ctx: agents.JobContext):
         ),
         llm=google.LLM(
             api_key=config["llm_api_key"],
-            model=config.get("llm_model", "gemini-2.5-flash"),
+            model=config.get("llm_model", "gemini-1.5-flash"),
+            temperature=0.3
         ),
         tts=sarvam.TTS(
             api_key=config["sarvam_api_key"],
