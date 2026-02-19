@@ -129,7 +129,7 @@ async def voice_agent_session(ctx: agents.JobContext):
         # 6. Greet and wait
         await session.generate_reply(instructions=config.get("welcome_message", "Hello! How can I help you?"))
 
-        while ctx.room.is_connected:
+        while ctx.room.connection_state == rtc.ConnectionState.CONN_CONNECTED:
             await asyncio.sleep(1)
             
     finally:
